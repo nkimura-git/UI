@@ -3,19 +3,17 @@ package kimura.norihiko.techacademy.ui
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
-import android.view.View
 import kotlinx.android.synthetic.main.activity_main.*
 
-class MainActivity : AppCompatActivity() , View.OnClickListener {
+class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        button1.setOnClickListener(this)
+        button1.setOnClickListener {
+            Log.d("UI_PARTS", "ボタンをタップしました")
+        }
     }
 
-    override fun onClick(v: View) {
-        Log.d("UI_PARTS", "ボタンをタップしました")
-    }
 }
