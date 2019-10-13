@@ -12,10 +12,10 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         button1.setOnClickListener {
-            Log.d("UI_PARTS", "ボタンをタップしました")
+            // EditTextの文字列をTextViewに設定
+            textView.text = editText.text.toString()
         }
 
-        textView.text = "テキスト"
     }
 
 }
